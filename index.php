@@ -78,7 +78,7 @@ $city = "pavlodar";
                 for ($j =1; $j <=9; $j++) {
                     echo "<td>$j * $i = " . ($j * $i ) . "</td>"; 
                     }
-                        
+                       
                 }
             echo "</table>";
             ?>
