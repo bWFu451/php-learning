@@ -59,7 +59,7 @@ $city = "pavlodar";
         }
         echo "<p> $sum </p>";
         ?>
-        // таблица умножения в HTML
+        // таблица умножения в HTML - не закончено
             <table border="1">
                 <tr>
                     <td>1*1=1</td>
@@ -73,13 +73,13 @@ $city = "pavlodar";
 
             <?php
             echo "<table border=1>";
-            for ($i = 1; $i <= 1; $i++) {
-                for ($j =1; $j <=1; $j++) {
-                    echo "<td>1*1=</td>"; {
-                     echo "<p>$j * 2 = " . ($j * 2) . "</p>";   
+            for ($i = 1; $i <= 3; $i++) {
+                echo "<tr>";
+                for ($j =1; $j <=4; $j++) {
+                    echo "<td>Группа $i, место $j</td>"; 
                     }
+                     echo "</tr>";   
                 }
-            }
             echo "</table>";
             ?>
     </p>
