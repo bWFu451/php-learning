@@ -4,21 +4,21 @@ $name = "man";
 $age = "27";
 $city = "pavlodar";
 ?>
-<!DOCTYPE html> // костяк сайта
-
-<html lang="ru">
+<!DOCTYPE html> 
+<!-- бубубу -->
+<html lang="ru"> 
 <head>
-    <meta charset="UTF-8"> // стандарт шрифта
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bribribricusbambicus</title> 
 </head>
 <body>
-    <h1>qq! <?php echo $name; ?></h1> // вывод переменных
+    <h1>qq! <?php echo $name; ?></h1> 
     <p> age: <?php echo $age; ?> </p>
     <p> city: <?php echo $city; ?> </p>
     <h2> <?php echo $whiplash; ?> </h2>
-
-    <p> <?php echo $name . " живет в " . $city . " ему " . $age . " лет "; ?> </p> // строчка со всей инфой разом
+<!-- строчка со всей инфой разом -->
+    <p> <?php echo $name . " живет в " . $city . " ему " . $age . " лет "; ?> </p>  
     <p> <?php echo $age + 5; ?> </p>
     <p> 
         <?php
@@ -43,25 +43,22 @@ $city = "pavlodar";
             }
         }
         ?>
-        // прибавление каждого числа на следующее
-        <?php
+        <?php // прибавление каждого числа на следующее
         for ($i = 1; $i <=10; $i ++) {
             if ($i + 1 ) {
                 echo ($i);
             }
         }
         ?>
-        // прибавление каждого числа на следующее v2
-        <?php 
+        <?php // прибавление каждого числа на следующее v2
         $sum = 0;
         for ($i = 1; $i <= 10; $i ++) {
             $sum = $sum + $i;
         }
         echo "<p> $sum </p>";
         ?>
-        // таблица умножения в HTML
-<?php 
-    echo "<table border=1";
+<?php  // Таблица умножения 
+    echo "<table border=1>";
         for ($i= 1; $i <= 9; $i ++) {
             echo "<tr>";
             for ($j= 1; $j <= 9; $j ++) {
@@ -73,9 +70,9 @@ $city = "pavlodar";
                     $text = "odd";
             }
             echo "<td style='background-color:$bg'>$j * $i = " . ($j * $i) . " $text" . "</td>";
-        }
+            }
             echo "</tr>";
-    }
+            }
     echo "</table>";
 ?>
     </p>
