@@ -7,10 +7,9 @@ foreach ($film as $favorite) {
 }
     echo (count($film ) . " all"); // подсчет пунктов
     echo "</ul>";
-    // echo (count($film ) . " all"); // подсчет пунктов
 ?>
 <?php
-$me = ["name" => "Javeer", "age" => 18, "type" => "man", "city" => "pavlodar", "FavoriteGame" => "EldenRing"];
+$me = ["name" => "Javeer", "age" => 18, "type" => "man", "city" => "NewYork", "FavoriteGame" => "EldenRing"];
 
 echo $me["name"];
 
