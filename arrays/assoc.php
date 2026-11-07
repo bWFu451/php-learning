@@ -8,7 +8,7 @@ $me["stack"] = "backend";
         foreach ($me as $key => $value) {
             echo "<td>$key: $value</td>";
     }
-        echo $me["name"];
+        // echo "<td> $me["name"] </td>";
     echo "</tr>";
 echo "</table>";
 ?>
