@@ -8,12 +8,3 @@ foreach ($film as $favorite) {
     echo (count($film ) . " all"); // подсчет пунктов
     echo "</ul>";
 ?>
-<?php
-$me = ["name" => "Javeer", "age" => 18, "type" => "man", "city" => "NewYork", "FavoriteGame" => "EldenRing"];
-
-echo $me["name"];
-
-foreach ($me as $key => $value) {
-    echo "<p>$key: $value</p>";
-}
-?>
