@@ -4,9 +4,9 @@ function parity($number) {
                 return  "odd";
             } else {
                 return "even";
-            }    
-        }
-echo parity (4);
-echo "<br>";
-echo parity (7);
+            }
+}
+            for ($i = 1; $i <= 10; $i ++) {
+                echo  parity($i) . "<br>";
+            }
 ?>
