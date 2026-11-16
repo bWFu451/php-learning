@@ -7,7 +7,7 @@
 if (isset($_POST["number"])) {
     $name = $_POST["number"];
     if (is_numeric($name)) {
-        echo "number<br>";
+        echo parity($name) . "<br>";
     } else {
         echo "alarm!<br>";
     }
@@ -20,5 +20,4 @@ function parity($tally)
         return "even " . htmlspecialchars($tally) . "<br>";
     }
 }
-echo parity($name);
 ?>
