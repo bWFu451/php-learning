@@ -1,12 +1,17 @@
 <?php
-for ($i = 1; $i <= 30; $i++) {
+function FzBz($i)
+{
     if ($i % 3 == 0 && $i % 5 == 0) {
-        echo "FizzBuzz<br>";
+        return "FizzBuzz<br>";
     } elseif ($i % 3 == 0) {
-        echo "Fizz<br>";
+        return "Fizz<br>";
     } elseif ($i % 5 == 0) {
-        echo "Buzz<br>";
+        return "Buzz<br>";
     } else {
-        echo $i . "<br>";
+        return $i . "<br>";
     }
 }
+for ($i = 1; $i <= 30; $i++) {
+    echo FzBz($i);
+}
+?>
