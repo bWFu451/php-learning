@@ -5,15 +5,19 @@
 
 <?php
 if (isset($_POST["number"])) {
-    is_numeric(true);
     $name = $_POST["number"];
+    if (is_numeric($name)) {
+        echo "number<br>";
+    } else {
+        echo "alarm!<br>";
+    }
 }
 function parity($tally)
 {
     if ($tally % 2) {
-        return "odd " . $tally . "<br>";
+        return "odd " . htmlspecialchars($tally) . "<br>";
     } else {
-        return "even " . $tally . "<br>";
+        return "even " . htmlspecialchars($tally) . "<br>";
     }
 }
 echo parity($name);
