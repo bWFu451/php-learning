@@ -5,9 +5,9 @@
 
 <?php
 if (isset($_POST["number"])) {
-    $name = $_POST["number"];
-    if (filter_var($name, FILTER_VALIDATE_INT) !== false) {
-        echo parity($name) . "<br>";
+    $number = $_POST["number"];
+    if (filter_var($number, FILTER_VALIDATE_INT) !== false) {
+        echo parity($number) . "<br>";
     } else {
         echo "alarm!<br>";
     }
