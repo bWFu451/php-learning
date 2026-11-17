@@ -6,7 +6,7 @@
 <?php
 if (isset($_POST["number"])) {
     $name = $_POST["number"];
-    if (is_numeric($name)) {
+    if (filter_var($name, FILTER_VALIDATE_INT) !== false) {
         echo parity($name) . "<br>";
     } else {
         echo "alarm!<br>";
@@ -15,9 +15,9 @@ if (isset($_POST["number"])) {
 function parity($tally)
 {
     if ($tally % 2) {
-        return "odd " . htmlspecialchars($tally) . "<br>";
+        return "odd " . htmlspecialchars($tally);
     } else {
-        return "even " . htmlspecialchars($tally) . "<br>";
+        return "even " . htmlspecialchars($tally);
     }
 }
 ?>
