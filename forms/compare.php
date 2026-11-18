@@ -11,19 +11,19 @@ if (isset($_POST["first"]) && isset($_POST["second"])) {
 
 
     if (filter_var($value1, FILTER_VALIDATE_INT) !== false && filter_var($value2, FILTER_VALIDATE_INT) !== false) {
-        echo $value1 . " " . compare($value1, $value2) . " " . $value2;
+        echo htmlspecialchars($value1) . " " . compare($value1, $value2) . " " . htmlspecialchars($value2);
     } else {
-        echo "meh";
+        echo "wrong";
     }
 }
 function compare($i1, $i2)
 {
     if ($i1 == $i2) {
-        return htmlspecialchars("==");
+        return "==";
     } elseif ($i1 > $i2) {
-        return htmlspecialchars(">");
+        return ">";
     } elseif ($i1 < $i2) {
-        return htmlspecialchars("<");
+        return "<";
     }
 }
 ?>
