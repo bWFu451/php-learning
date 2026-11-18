@@ -12,16 +12,18 @@ if (isset($_POST["first"]) && isset($_POST["second"])) {
 
     if (filter_var($value1, FILTER_VALIDATE_INT) !== false && filter_var($value2, FILTER_VALIDATE_INT) !== false) {
         echo $value1 . " " . compare($value1, $value2) . " " . $value2;
+    } else {
+        echo "meh";
     }
 }
 function compare($i1, $i2)
 {
     if ($i1 == $i2) {
-        return "==";
+        return htmlspecialchars("==");
     } elseif ($i1 > $i2) {
-        return ">";
+        return htmlspecialchars(">");
     } elseif ($i1 < $i2) {
-        return "<";
+        return htmlspecialchars("<");
     }
 }
 ?>
