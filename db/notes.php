@@ -14,6 +14,22 @@ if (isset($_POST["info"])) {
         echo htmlspecialchars($message = "empty field");
     }
 }
+if (isset($_POST["remove_id"])) {
+    $removeId = filter_var($_POST["remove_id"], FILTER_VALIDATE_INT);
+
+    if ($removeId !== false) {
+        $stmt = $pdo->prepare("DELETE FROM notes WHERE id = ?");
+        $stmt->execute([$removeId]);
+
+        header("Location: notes.php");
+        exit;
+    }
+    foreach ($rows as $row) {
+        echo "<div>" . htmlspecialchars($row["id"]);
+        echo "<form method='post'>";
+        echo "<input type='hidden' name='remove_id' value='" . $row["id"] . "'>";
+    }
+}
 ?>
 <form method="post">
     <input type="text" name="info">
