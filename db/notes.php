@@ -24,11 +24,6 @@ if (isset($_POST["remove_id"])) {
         header("Location: notes.php");
         exit;
     }
-    foreach ($rows as $row) {
-        echo "<div>" . htmlspecialchars($row["id"]);
-        echo "<form method='post'>";
-        echo "<input type='hidden' name='remove_id' value='" . $row["id"] . "'>";
-    }
 }
 ?>
 <form method="post">
