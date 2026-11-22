@@ -20,8 +20,8 @@ if (isset($_POST["info"])) {
     <button type="submit">enter</button>
 </form>
 <?php
-if (isset($_GET["saved"])) {
-    echo htmlspecialchars($message = "Saved");
+if (isset($_GET["?"])) {
+    echo htmlspecialchars($message = "?");
 }
 $stmt = $pdo->query("SELECT body, created_at FROM notes ORDER BY id DESC");
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
