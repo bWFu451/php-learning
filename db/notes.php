@@ -31,20 +31,15 @@ if (isset($_POST["remove_id"])) {
     <button type="submit">enter</button>
 </form>
 <?php
-if (isset($_GET["?"])) {
-    echo htmlspecialchars($message = "?");
-}
-$stmt = $pdo->query("SELECT body, created_at FROM notes ORDER BY id DESC");
+$stmt = $pdo->query("SELECT body, created_at, id FROM notes ORDER BY id DESC");
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($rows as $row) {
+    echo "<div>";
     echo "<p>" . htmlspecialchars($row["body"]) . " (" . $row["created_at"] . ")</p>";
-}
-foreach ($rows as $row) {
-    echo "<div>" . htmlspecialchars($row["remove_id"]);
     echo "<form method='post'>";
-    echo "<input type='hidden' name='remove_id' value='" . $row["remove_id"] . "'>";
-    echo "<button type='submit'>Удалить</button>";
+    echo "<input type='hidden' name='remove_id' value='" . $row["id"] . "'>";
+    echo "<button type='submit'>стереть</button>";
     echo "</form></div>";
 }
 ?>
