@@ -40,3 +40,11 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($rows as $row) {
     echo "<p>" . htmlspecialchars($row["body"]) . " (" . $row["created_at"] . ")</p>";
 }
+foreach ($rows as $row) {
+    echo "<div>" . htmlspecialchars($row["remove_id"]);
+    echo "<form method='post'>";
+    echo "<input type='hidden' name='remove_id' value='" . $row["remove_id"] . "'>";
+    echo "<button type='submit'>Удалить</button>";
+    echo "</form></div>";
+}
+?>
